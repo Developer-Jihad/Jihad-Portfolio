@@ -72,7 +72,7 @@ export default function Home() {
               <div className="text-white text-center lg:text-left">
                 <h1 className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[48px]
                              font-bold leading-tight">
-                  Hello - I'm 
+                  Hello - I&apos;m
                 </h1>
                 <h1 className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[48px]
                              font-bold leading-tight

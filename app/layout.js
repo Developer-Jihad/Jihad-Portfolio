@@ -2,7 +2,7 @@ import { Lexend } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import Background from "./components/background";
+import Background from "./components/Background";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
