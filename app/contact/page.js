@@ -16,12 +16,12 @@ const ContactPage = () => {
       <h1 className="text-[32px] sm:text-[48px] font-bold text-center mt-1 bg-gradient-to-r from-purple-500 via-red-400 to-pink-400 text-transparent bg-clip-text  drop-shadow-lg">
         Contact Me
       </h1>
-      <p className="text-gray-300 pb-5 border-b font-light text-center">
+      <p className="text-gray-300 pb-5 border-b font-light text-center mb-10">
         Feel free to reach out for discussions on web development, design, or
         anything related to the ever-evolving world of technology.
       </p>
 
-      <div className="min-h-[calc(70vh)] flex items-center">
+      <div className="min-h-[calc(50vh)] flex items-center">
         <div className="flex flex-col md:flex-row justify-evenly w-full items-center">
           <div className="flex items-center justify-center flex-col">
             <div className="flex gap-14 my-6">
@@ -101,9 +101,9 @@ const ContactPage = () => {
               </Link>
             </div>
           </div>
-          <div className="p-5 bg-black/30 border border-gray-700 rounded-xl my-10">
+          <div className="p-7 bg-black/30 border border-gray-700 rounded-xl my-10">
             <div
-              className={` font-light space-y-3 border-l-red-400 border-l-4 pl-3 py-1 `}
+              className={` font-light space-y-3 border-l-red-400 border-l-4 pl-5 py-3 `}
             >
               <p className="text-gray-300">
                 <span className="text-red-400 font-bold">Phone:</span> 01303-417
