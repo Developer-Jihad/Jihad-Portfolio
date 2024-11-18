@@ -1,0 +1,11 @@
+{
+    "emmet.optimizeStylesheetParsing": true,
+    "emmet.preferences": {
+
+    },
+    "emmet.useInlineCompletions": true,
+    "emmet.includeLanguages": {
+        "html": "html"
+    },
+    "emmet.showSuggestionsAsSnippets": true
+}
