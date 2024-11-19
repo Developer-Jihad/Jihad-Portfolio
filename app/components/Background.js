@@ -26,7 +26,7 @@ export default function Background() {
             linear-gradient(to right, rgba(99, 102, 241, 0.1) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(99, 102, 241, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '40px 40px',
+          backgroundSize: '30px 30px',
         }}
       />
 
@@ -38,6 +38,11 @@ export default function Background() {
           opacity: 0.8,
         }}
       />
+      <div className="fixed inset-0 pointer-events-none -z-20">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[100px]" />
+      </div>
+      
     </>
   )
 }

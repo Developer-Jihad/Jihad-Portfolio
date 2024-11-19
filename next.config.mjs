@@ -14,7 +14,19 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "images.unsplash.com",
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'skillicons.dev',
+        port: '',
+        pathname: '/icons/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.icons8.com',
+        port: '',
+        pathname: '/fluency/**',
+      },
     ],
   },
 };

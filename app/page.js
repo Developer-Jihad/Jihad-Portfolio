@@ -40,19 +40,17 @@ const ActionButton = ({ href, text, icon, target = "_self" }) => (
 );
 
 const ExperienceCard = ({ number, text }) => (
-  <div className="flex flex-col items-center 
+  <div className="sm:flex sm:flex-col items-center 
                   w-[97%] sm:w-auto
                   px-4 sm:px-5 lg:px-6
                   py-3 sm:py-2.5 lg:py-3
-                  bg-gray-900/50 backdrop-blur-sm 
-                  rounded-lg border border-gray-800/50">
+                  bg-white/5 backdrop-blur-xl border border-white/10 group relative flex items-center gap-3 sm:gap-1 p-4 rounded-xl">
     <span className="text-2xl sm:text-2xl lg:text-3xl font-bold 
                    bg-gradient-to-r from-purple-500 via-pink-400 to-red-400 
                    text-transparent bg-clip-text">
       {number}+
     </span>
-    <span className="text-sm sm:text-sm lg:text-base
-                   text-gray-300 whitespace-nowrap">
+    <span className="text-gray-300 whitespace-nowrap">
       {text}
     </span>
   </div>

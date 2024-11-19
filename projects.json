@@ -1,0 +1,130 @@
+[
+    {
+      "id": 1,
+      "featured": true,
+      "name": "Hadith App",
+      "type": "video",
+      "videoUrl": "https://www.youtube.com/embed/wfeE7OZdrfQ?si=itNhhlHYtVbNe6qG",
+      "description": "A comprehensive Hadith app with modern features and user-friendly interface.",
+      "technology": ["Next.js", "Tailwind CSS"],
+      "liveLink": "https://ird-hadis-nextjs-app.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/ird-hadis-nextjs-app"
+    },
+    {
+      "id": 2,
+      "name": "Halal Jibika - Find Your Job",
+      "img": "https://i.ibb.co/CQgwDLR/halal-jibika.jpg",
+      "description": "Job searching platform with advanced filtering and user authentication.",
+      "technology": ["MERN Stack", "Firebase Auth"],
+      "liveLink": "https://halal-jibika-mern-stack.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/Halal-Jibika-MERN-Stack"
+    },
+    {
+      "id": 3,
+      "name": "Portfolio Website",
+      "img": "https://i.ibb.co/sm88m9R/portfolio.jpg",
+      "description": "Personal portfolio showcasing my projects and skills.",
+      "technology": ["Next.js", "Tailwind CSS"],
+      "liveLink": "https://jihad-portfolio-zeta.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/Jihad-Portfolio"
+    },
+    {
+      "id": 4,
+      "name": "Task Management App",
+      "img": "https://i.ibb.co/SwrJm6d/todo-app.jpg",
+      "description": "Task management application with React Context API.",
+      "technology": ["React.js", "Raw CSS"],
+      "liveLink": "https://todo-app-with-use-reducer-context-api.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/todo-app-with-useReducer-contextApi"
+    },
+    {
+      "id": 5,
+      "name": "Islamic Education",
+      "img": "https://i.ibb.co/VmW5dBC/islamic-education.jpg",
+      "description": "Educational platform focused on Islamic studies.",
+      "technology": ["React.js", "Bootstrap"],
+      "liveLink": "https://islamic-education.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/Islamic-Education"
+    },
+    {
+      "id": 6,
+      "name": "Bank Website",
+      "img": "https://i.ibb.co/JzFRZ9p/bank-website.jpg",
+      "description": "Modern banking website with transaction features.",
+      "technology": ["JavaScript", "Raw CSS"],
+      "liveLink": "https://java-script-banksite.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/JavaScript-Banksite"
+    },
+    {
+      "id": 7,
+      "name": "Find Books",
+      "img": "https://i.ibb.co/1ZhcrV3/find-books.jpg",
+      "description": "Book search application with filtering capabilities.",
+      "technology": ["JavaScript", "Raw CSS"],
+      "liveLink": "https://book-archive-beryl.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/bookArchive"
+    },
+    {
+      "id": 8,
+      "name": "Nike Fashion",
+      "img": "https://i.ibb.co/d0H5qC7/nike-fashion.jpg",
+      "description": "E-commerce website for Nike products.",
+      "technology": ["HTML", "Bootstrap"],
+      "liveLink": "https://nike-shoes-lilac.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/Nike-Shoes"
+    },
+    {
+      "id": 9,
+      "name": "Panda Commerce",
+      "img": "https://i.ibb.co/209XLcb/panda-commerce.jpg",
+      "description": "E-commerce platform with modern design.",
+      "technology": ["HTML", "Bootstrap"],
+      "liveLink": "https://panda-commerce-liard.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/Panda-Commerce"
+    },
+    {
+      "id": 10,
+      "name": "Penguin Fashion",
+      "img": "https://i.ibb.co/gvpmWrC/penguin-fashion.jpg",
+      "description": "Fashion e-commerce website with product showcase.",
+      "technology": ["HTML", "Bootstrap"],
+      "liveLink": "https://penguin-fashion-five.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/Penguin-Fashion"
+    },
+    {
+      "id": 11,
+      "name": "Honda CBR",
+      "img": "https://i.ibb.co/g6qCzt9/honda-cbr.jpg",
+      "description": "Motorcycle showcase website for Honda CBR.",
+      "technology": ["HTML", "Bootstrap"],
+      "liveLink": "https://honda-cbr-nine.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/Honda-CBR"
+    },
+    {
+      "id": 12,
+      "name": "Leader Board",
+      "img": "https://i.ibb.co/m07yrmt/leader-board.jpg",
+      "description": "Competitive leaderboard display application.",
+      "technology": ["HTML", "CSS"],
+      "liveLink": "https://leader-board-gold.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/Leader-Board"
+    },
+    {
+      "id": 13,
+      "name": "Cosmetics Website",
+      "img": "https://i.ibb.co/KVHrnDt/cosmetics-website.jpg",
+      "description": "E-commerce platform for cosmetics products.",
+      "technology": ["HTML", "CSS"],
+      "liveLink": "https://cosmetics-ecommerce-gilt.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/cosmetics-ecommerce"
+    },
+    {
+      "id": 14,
+      "name": "Sports News",
+      "img": "https://i.ibb.co/YL1BHpW/sport-news.jpg",
+      "description": "Sports news portal with latest updates.",
+      "technology": ["HTML", "CSS"],
+      "liveLink": "https://sports-news-navy.vercel.app/",
+      "codeLink": "https://github.com/Developer-Jihad/Sports-News"
+    }
+  ]

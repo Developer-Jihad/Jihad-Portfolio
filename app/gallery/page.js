@@ -53,13 +53,13 @@ const galleryImages = [
 
 export default function Gallery() {
   return (
-    <div className="min-h-screen pb-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen pb-8 px-4 sm:px-6 lg:px-8 py-3">
       <div className="max-w-7xl mx-auto">
         {/* Gallery Header */}
         <h1 className="text-[32px] sm:text-[48px] font-bold text-center mt-1 bg-gradient-to-r from-purple-500 via-red-400 to-pink-400 text-transparent bg-clip-text  drop-shadow-lg">
           Photo Gallery
       </h1>
-      <p className="text-gray-300 pb-5 border-b font-light text-center mb-7">
+      <p className="text-gray-300 pb-7 border-b font-light text-center mb-10">
         My Photography Collection are shown here to give you a glimpse of my Personality.
       </p>
 

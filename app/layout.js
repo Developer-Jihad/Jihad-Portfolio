@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
                    bg-[#030712]`}
       >
         <Background />
+        
 
         <main className="flex flex-col relative">
           <div className="fixed w-full z-50">

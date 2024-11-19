@@ -1,158 +1,176 @@
 import Link from "next/link";
-import ProjectCard from "../components/ProjectCard";
 import Image from "next/image";
 import code from "@/public/icons/code.png";
 import view from "@/public/icons/view.png";
+import projects from "@/projects.json";
+import ProjectCard from "../components/ProjectCard";
 
 const ProjectsPage = () => {
+
+  const featuredProject = projects.find(p => p.featured);
+  const regularProjects = projects.filter(p => !p.featured);
+
   return (
-    <div>
-      <h1 className="text-[32px] sm:text-[48px] font-bold text-center mt-1 bg-gradient-to-r from-purple-500 via-red-400 to-pink-400 text-transparent bg-clip-text  drop-shadow-lg">
-        My Projects
-      </h1>
-      <p className="text-gray-300 mb-5 text-center font-light">
-        My Created Best Projects are shown here that makes my skills stronger.
-      </p>
-      <hr />
-      <div className=" my-7 grid sm:grid-cols-2 md:grid-cols-3 gap-7 ">
-        <div className=" bg-black bg-opacity-50 border border-red-200 rounded-xl relative overflow-hidden">
-          <div className="relative flex items-center justify-center ">
-            <iframe
-              width="560"
-              height="250"
-              src="https://www.youtube.com/embed/wfeE7OZdrfQ?si=itNhhlHYtVbNe6qG"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
+    <div className="container mx-auto max-w-7xl px-3 py-7">
+      
+        {/* Header Section */}
+        <div className="max-w-4xl mx-auto text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+            <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+            <span className="text-white/70 text-sm">Available for new opportunities</span>
           </div>
-          <div className="flex items-center justify-between text-xl my-2 mx-3">
-            <h3 className="text-gray-300">Hadith App</h3>
-            <div className="flex gap-3">
-              <Link
-                className="p-1 px-2 hover:bg-red-400 rounded-full"
-                href="https://ird-hadis-nextjs-app.vercel.app/"
-                target="_blank"
-              >
-                <Image src={view} alt="Github Logo" width={28} height={35} />
-              </Link>
-              <Link
-                className="p-1 px-2 hover:bg-red-400 rounded-full"
-                href="https://github.com/Developer-Jihad/ird-hadis-nextjs-app"
-                target="_blank"
-              >
-                <Image src={code} alt="Github Logo" width={28} height={35} />
-              </Link>
-            </div>
-          </div>
-          <p className=" bg-red-400 text-white px-4 py-1 rounded-full absolute top-2 left-2 drop-shadow-lg">
-            Next Js | Tailwind
+          <h1 className="text-gray-400 text-5xl md:text-7xl font-bold mb-6">
+          My
+            <span className="bg-gradient-to-r from-purple-500 via-red-400 to-pink-400 text-transparent bg-clip-text"> Projects</span>
+          </h1>
+          <p className="text-white/60 text-lg leading-relaxed max-w-3xl mx-auto">
+          A collection of projects that showcase my passion for creating beautiful and functional web experiences
           </p>
         </div>
 
-        <ProjectCard
-          img="https://i.ibb.co/CQgwDLR/halal-jibika.jpg"
-          codeLink="https://github.com/Developer-Jihad/Halal-Jibika-MERN-Stack"
-          liveLink="https://halal-jibika-mern-stack.vercel.app/"
-          name="Halal Jibika - Find Your Job"
-          technology="MERN Stack | Firebase Auth"
-        ></ProjectCard>
-        <ProjectCard
-          img="https://i.ibb.co/sm88m9R/portfolio.jpg"
-          codeLink="https://github.com/Developer-Jihad/Jihad-Portfolio"
-          liveLink="https://jihad-portfolio-zeta.vercel.app/"
-          name="Protfolio Website"
-          technology="Next Js | Tailwind"
-        ></ProjectCard>
-        <ProjectCard
-          img="https://i.ibb.co/SwrJm6d/todo-app.jpg"
-          codeLink="https://github.com/Developer-Jihad/todo-app-with-useReducer-contextApi"
-          liveLink="https://todo-app-with-use-reducer-context-api.vercel.app/"
-          name="Task Management App"
-          technology="React Js | Raw CSS"
-        ></ProjectCard>
-        <ProjectCard
-          img="https://i.ibb.co/VmW5dBC/islamic-education.jpg"
-          codeLink="https://github.com/Developer-Jihad/Islamic-Education"
-          liveLink="https://islamic-education.vercel.app/"
-          name="Islamic Education"
-          technology="React Js | Bootstrap"
-        ></ProjectCard>
+      {/* Featured Project */}
+      {featuredProject && (
+        <div className="mb-12">
+          <div className="space-y-4 mb-12">
+            <div className="flex items-center gap-4">
+              <div className="inline-flex items-center gap-2 px-5 py-2 bg-purple-500/10 rounded-full">
+                <div className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
+                <span className="text-purple-400 font-medium">Featured Project</span>
+              </div>
+              <hr className="flex-1 border-t border-white/30" />
+            </div>
+          </div>
 
-        <ProjectCard
-          img="https://i.ibb.co/JzFRZ9p/bank-website.jpg"
-          codeLink="https://github.com/Developer-Jihad/JavaScript-Banksite"
-          liveLink="https://java-script-banksite.vercel.app/"
-          name="Bank Website"
-          technology="JavaScript | Raw CSS"
-        ></ProjectCard>
-        <ProjectCard
-          img="https://i.ibb.co/1ZhcrV3/find-books.jpg"
-          codeLink="https://github.com/Developer-Jihad/bookArchive"
-          liveLink="https://book-archive-beryl.vercel.app/"
-          name="Find Books"
-          technology="JavaScript | Raw CSS"
-        ></ProjectCard>
-        <ProjectCard
-          img="https://i.ibb.co/d0H5qC7/nike-fashion.jpg"
-          codeLink="https://github.com/Developer-Jihad/Nike-Shoes"
-          liveLink="https://nike-shoes-lilac.vercel.app/"
-          name="Nike Fashion"
-          technology="HTML | Bootstrap"
-        ></ProjectCard>
-        <ProjectCard
-          img="https://i.ibb.co/209XLcb/panda-commerce.jpg"
-          codeLink="https://github.com/Developer-Jihad/Panda-Commerce"
-          liveLink="https://panda-commerce-liard.vercel.app/"
-          name="Panda Commerce"
-          technology="HTML | Bootstrap"
-        ></ProjectCard>
-        <ProjectCard
-          img="https://i.ibb.co/gvpmWrC/penguin-fashion.jpg"
-          codeLink="https://github.com/Developer-Jihad/Penguin-Fashion"
-          liveLink="https://penguin-fashion-five.vercel.app/"
-          name="Penguin Fashion"
-          technology="HTML | Bootstrap"
-        ></ProjectCard>
+          <div className="relative group">
+            {/* Background Glow */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/20 to-red-600/20 rounded-[20px] blur opacity-0 group-hover:opacity-100 transition duration-1000" />
+            
+            <div className="relative bg-[#0A0A0A] rounded-[20px] overflow-hidden border border-white/5">
+              <div className="aspect-video bg-black">
+                <iframe
+                  className="w-full h-full"
+                  src={featuredProject.videoUrl}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
 
-        <ProjectCard
-          img="https://i.ibb.co/g6qCzt9/honda-cbr.jpg"
-          codeLink="https://github.com/Developer-Jihad/Honda-CBR"
-          liveLink="https://honda-cbr-nine.vercel.app/"
-          name="Honda CBR"
-          technology="HTML | Bootsrap "
-        ></ProjectCard>
-        <ProjectCard
-          img="https://i.ibb.co/m07yrmt/leader-board.jpg"
-          codeLink="https://github.com/Developer-Jihad/Leader-Board"
-          liveLink="https://leader-board-gold.vercel.app/"
-          name="Leader Board"
-          technology="HTML | CSS"
-        ></ProjectCard>
-        <ProjectCard
-          img="https://i.ibb.co/KVHrnDt/cosmetics-website.jpg"
-          codeLink="https://github.com/Developer-Jihad/cosmetics-ecommerce"
-          liveLink="https://cosmetics-ecommerce-gilt.vercel.app/"
-          name="Cosmetics Website"
-          technology="HTML | CSS "
-        ></ProjectCard>
-        <ProjectCard
-          img="https://i.ibb.co/YL1BHpW/sport-news.jpg"
-          codeLink="https://github.com/Developer-Jihad/Sports-News"
-          liveLink="https://sports-news-navy.vercel.app/"
-          name="Sports News"
-          technology="HTML | CSS "
-        ></ProjectCard>
-        {/* <ProjectCard
-          img="https://i.ibb.co/ccKYZ7z/fifa-world-cup.jpg"
-          codeLink="https://github.com/Developer-Jihad/FIFA-World-Cup"
-          liveLink="https://fifa-world-cup-nu.vercel.app/"
-          name="Fifa World Cup"
-          technology="HTML | CSS "
-        ></ProjectCard> */}
+              <div className="p-10">
+                <h3 className="text-2xl sm:text-4xl font-bold text-white mb-4">
+                  {featuredProject.name}
+                </h3>
+                
+                <p className="text-gray-400 mb-5 leading-relaxed">
+                  {featuredProject.description}
+                </p>
+                
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {featuredProject.technology.map((tech, index) => (
+                    <span 
+                      key={index}
+                      className="px-4 py-1.5 text-sm font-medium text-white/80 bg-white/5 rounded-full border border-white/10"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href={featuredProject.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/btn inline-flex items-center gap-2 px-12 py-2.5 sm:px-8 sm:py-3.5 
+                      bg-gradient-to-r from-violet-500 to-indigo-500
+                      text-white rounded-full font-medium relative overflow-hidden
+                      shadow-[0_2px_20px_-5px_rgba(99,102,241,0.3)]
+                      hover:shadow-[0_5px_30px_-10px_rgba(99,102,241,0.4)]
+                      hover:from-violet-600 hover:to-indigo-600
+                      transition-all duration-300"
+                  >
+                    <div className="relative flex items-center gap-2">
+                      <Image 
+                        src={view} 
+                        alt="View Live" 
+                        width={20} 
+                        height={20} 
+                        className="brightness-0 invert" 
+                      />
+                      <span className="text-[15px] tracking-wide">View Project</span>
+                      <svg 
+                        className="w-5 h-5 ml-0.5 group-hover/btn:translate-x-1 transition-transform duration-300" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                      >
+                        <path 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          strokeWidth={2} 
+                          d="M13 7l5 5m0 0l-5 5m5-5H6" 
+                        />
+                      </svg>
+                    </div>
+                  </a>
+                  <a
+                    href={featuredProject.codeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/btn inline-flex items-center gap-2 px-12 py-2.5 sm:px-8 sm:py-3.5
+                      bg-[#111111] text-gray-300 rounded-full font-medium
+                      relative overflow-hidden border border-gray-800
+                      hover:text-white hover:border-indigo-500/30 hover:bg-[#161616]
+                      transition-all duration-300"
+                  >
+                    <div className="relative flex items-center gap-2">
+                      <Image 
+                        src={code} 
+                        alt="View Code" 
+                        width={20} 
+                        height={20} 
+                        className="opacity-80" 
+                      />
+                      <span className="text-[15px] tracking-wide">Source Code</span>
+                      <svg 
+                        className="w-5 h-5 ml-0.5 opacity-0 group-hover/btn:opacity-100 group-hover/btn:translate-x-1 transition-all duration-300" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                      >
+                        <path 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          strokeWidth={2} 
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" 
+                        />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Projects Grid */}
+      <div>
+      <div className="flex items-center gap-4">
+              <div className="inline-flex items-center gap-2 px-5 py-2 bg-purple-500/10 rounded-full">
+                <div className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
+                <span className="text-purple-400 font-medium">All Projects</span>
+              </div>
+              <hr className="flex-1 border-t border-white/30" />
+            </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          {regularProjects.map(project => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
       </div>
     </div>
   );
 };
+
 export default ProjectsPage;
