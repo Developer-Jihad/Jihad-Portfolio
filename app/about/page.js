@@ -13,7 +13,7 @@ const skills = [
 const AboutPage = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <div className="containermax-w-7xl px-2 py-7 md:py-12  relative">
+      <div className="container mx-auto max-w-7xl px-2 py-7 md:py-12  relative">
         {/* Header Section */}
         <div className="max-w-4xl mx-auto text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">

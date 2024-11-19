@@ -28,6 +28,7 @@ const nextConfig = {
         pathname: '/fluency/**',
       },
     ],
+    domains: ['skillicons.dev', 'img.icons8.com'],
   },
 };
 

@@ -84,17 +84,21 @@ const SkillPage = () => {
     `https://skillicons.dev/icons?i=${iconName}`;
 
   return (
-    <div className="container mx-auto max-w-6xl px-3 py-8">
+    <div className="container mx-auto max-w-7xl px-3 py-12">
       {/* Header Section */}
-      <div className="space-y-4 text-center mb-10">
-        <h1 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-500 via-red-400 to-pink-400 text-transparent bg-clip-text drop-shadow-lg">
-          Qualifications
-        </h1>
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+      <div className="max-w-6xl mx-auto text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+            <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+            <span className="text-white/70 text-sm">Available for new opportunities</span>
+          </div>
+          <h1 className="text-gray-400 text-5xl md:text-7xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-purple-500 via-red-400 to-pink-400 text-transparent bg-clip-text">Qualifications</span>
+          </h1>
+          <p className="text-white/60 text-lg leading-relaxed max-w-4xl mx-auto">
           I am happy to share my skills and knowledge to make positive change by
           connecting with others.
-        </p>
-      </div>
+          </p>
+        </div>
 
       {/* Tab Buttons */}
       
@@ -142,7 +146,7 @@ const SkillPage = () => {
                     <div key={skill.name} className="bg-white/5 backdrop-blur-xl border border-white/10 group relative flex items-center gap-4 p-4 rounded-xl  hover:shadow-[0_0_20px_rgba(248,113,113,0.1)]">
                       <div className="relative">
                         <div className="absolute -inset-1 bg-gradient-to-br from-red-400/20 to-purple-400/20 rounded-lg opacity-0 group-hover:opacity-100 blur "></div>
-                        <Image 
+                        <img 
                           src={getSkillIcon(skill.icon)} 
                           alt={skill.name}
                           className="relative w-8 h-8 transition-transform duration-300 group-hover:scale-110"
@@ -164,7 +168,7 @@ const SkillPage = () => {
                     <div key={skill.name} className="bg-white/5 backdrop-blur-xl border border-white/10 group relative flex items-center gap-4 p-4 rounded-xl  hover:shadow-[0_0_20px_rgba(248,113,113,0.1)]">
                       <div className="relative">
                         <div className="absolute -inset-1 bg-gradient-to-br from-red-400/20 to-purple-400/20 rounded-lg opacity-0 group-hover:opacity-100 blur "></div>
-                        <Image 
+                        <img 
                           src={getSkillIcon(skill.icon)} 
                           alt={skill.name}
                           className="relative w-8 h-8 transition-transform duration-300 group-hover:scale-110"
@@ -189,7 +193,7 @@ const SkillPage = () => {
                   <div key={skill.name} className="bg-white/5 backdrop-blur-xl border border-white/10 group relative flex items-center gap-4 p-4 rounded-xl  hover:shadow-[0_0_20px_rgba(248,113,113,0.1)]">
                     <div className="relative"> 
                       <div className="absolute -inset-1 bg-gradient-to-br from-red-400/20 to-purple-400/20 rounded-lg opacity-0 group-hover:opacity-100 blur "></div>
-                      <Image 
+                      <img 
                         src={getSkillIcon(skill.icon)} 
                         alt={skill.name}
                         className="relative w-8 h-8 transition-transform duration-300 group-hover:scale-110"
@@ -218,6 +222,8 @@ const SkillPage = () => {
                 <Image 
                   src={exp.icon} 
                   alt={exp.jobTitle}
+                  width={56}
+                  height={56}
                   className="relative w-14 h-14 p-2 bg-black/50 rounded-lg transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
@@ -288,6 +294,8 @@ const SkillPage = () => {
                 <Image 
                   src={edu.icon} 
                   alt={edu.certificate}
+                  width={56}
+                  height={56}
                   className="relative w-14 h-14 p-2 bg-black/50 rounded-lg transition-transform duration-300 group-hover:scale-110"
                 />
               </div>

@@ -135,9 +135,9 @@ const ContactPage = () => {
             <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
             <span className="text-white/70 text-sm">Available for new opportunities</span>
           </div>
-          <h1 className="text-gray-400 text-3xl md:text-5xl font-bold mb-4">
-          Let&apos;s start a <br/>
-            <span className="text-4xl md:text-7xl bg-gradient-to-r from-purple-500 via-red-400 to-pink-400 text-transparent bg-clip-text"> conversation</span>
+          <h1 className="text-gray-400 text-4xl md:text-7xl font-bold mb-6">
+          Let&apos;s
+            <span className="bg-gradient-to-r from-purple-500 via-red-400 to-pink-400 text-transparent bg-clip-text"> conversation</span>
           </h1>
           <p className="text-white/60 text-lg leading-relaxed max-w-3xl mx-auto">
           Whether you have a project in mind, want to collaborate, or just want to say hi - I&apos;d love to hear from you.

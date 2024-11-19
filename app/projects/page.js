@@ -11,7 +11,7 @@ const ProjectsPage = () => {
   const regularProjects = projects.filter(p => !p.featured);
 
   return (
-    <div className="container mx-auto max-w-7xl px-3 py-7">
+    <div className="container mx-auto max-w-7xl px-3 py-12">
       
         {/* Header Section */}
         <div className="max-w-4xl mx-auto text-center mb-12">

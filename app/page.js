@@ -58,7 +58,7 @@ const ExperienceCard = ({ number, text }) => (
 
 export default function Home() {
   return (
-    <div className="min-h-[calc(90vh-60px)] h-full">
+    <div className="min-h-[calc(90vh-60px)] h-full container mx-auto max-w-7xl">
       <div className="h-full flex items-center">
         <div className="container mx-auto">
           <div className="flex flex-col-reverse lg:flex-row justify-between items-center 

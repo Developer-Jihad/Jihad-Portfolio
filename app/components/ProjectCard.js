@@ -18,6 +18,8 @@ const ProjectCard = ({ project }) => {
           <Image 
             src={img} 
             alt={name}
+            width={500}
+            height={300}
             className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out"
           />
           {/* Overlay */}

@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
             <div className="w-20 lg:w-24 z-40 fixed h-screen flex items-center">
               <Navbar />
             </div>
-            <div className="md:ml-28 w-full relative">{children}</div>
+            <div className="md:ml-28 w-full relative ">{children}</div>
           </div>
         </main>
       </body>
