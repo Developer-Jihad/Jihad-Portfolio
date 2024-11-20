@@ -15,12 +15,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${lexend.className} min-h-screen
-                   bg-[#030712]`}
-      >
+      <body className={`${lexend.className} min-h-screen bg-[#000]`}>
         <Background />
-        
 
         <main className="flex flex-col relative">
           <div className="fixed w-full z-50">
@@ -31,7 +27,9 @@ export default function RootLayout({ children }) {
             <div className="w-20 lg:w-24 z-40 fixed h-screen flex items-center">
               <Navbar />
             </div>
-            <div className="md:ml-28 w-full relative ">{children}</div>
+            <div className="md:ml-28 w-full relative px-3 md:px-0 py-7">
+              {children}
+            </div>
           </div>
         </main>
       </body>

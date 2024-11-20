@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .my-bg-image {
-  background-image: url("../public/bg-top-gradient.png");
-} */
-.my-bg-image {
-  background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
 /* * {
   margin: 0 auto;
@@ -128,7 +119,7 @@
   }
 }
 
-@keyframes floatUpward {
+/* @keyframes floatUpward {
   from {
     transform: translateY(100vh);
     opacity: 0;
@@ -143,14 +134,4 @@
     transform: translateY(-100vh);
     opacity: 0;
   }
-}
-
-.animate-floatUpward {
-  animation: floatUpward linear infinite;
-}
-
-@layer utilities {
-  .transition-smooth {
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}
+} */

@@ -53,7 +53,7 @@ const galleryImages = [
 
 export default function Gallery() {
   return (
-    <div className="min-h-screen pb-8 px-4 sm:px-6 lg:px-8 py-3">
+    <div className="min-h-screen">
       <div className="max-w-7xl mx-auto">
         {/* Gallery Header */}
         <h1 className="text-[32px] sm:text-[48px] font-bold text-center mt-1 bg-gradient-to-r from-purple-500 via-red-400 to-pink-400 text-transparent bg-clip-text  drop-shadow-lg">

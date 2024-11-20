@@ -64,8 +64,7 @@ export default function Home() {
           <div className="flex flex-col-reverse lg:flex-row justify-between items-center 
                         gap-8 sm:gap-8 lg:gap-10">
             {/* Left Content */}
-            <div className="w-full lg:w-1/2 space-y-5 sm:space-y-5 lg:space-y-6
-                          px-4 sm:px-0">
+            <div className="w-full lg:w-1/2 space-y-5 sm:space-y-5 lg:space-y-6">
               {/* Heading */}
               <div className="text-white text-center lg:text-left">
                 <h1 className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[48px]
@@ -135,10 +134,8 @@ export default function Home() {
             </div>
 
             {/* Right Image */}
-            <div className="w-full lg:w-1/2 flex justify-center lg:justify-end
-                          -mx-4 sm:mx-0">
-              <div className="w-full sm:w-[300px] md:w-[380px] lg:w-[90%]
-                            px-4 sm:px-0">
+            <div className="w-full lg:w-1/2 flex justify-center lg:justify-end ">
+              <div className="w-full sm:w-[300px] md:w-[380px] lg:w-[90%]">
                 <div className="relative">
                   <Image
                     className="relative w-full h-auto
