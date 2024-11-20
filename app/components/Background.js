@@ -34,15 +34,10 @@ export default function Background() {
       <div 
         className="fixed inset-0 -z-30"
         style={{
-          background: 'radial-gradient(circle at center, transparent 0%, #0f0514 100%)',
+          background: 'radial-gradient(circle at center, transparent 0%, #000 100%)',
           opacity: 0.8,
         }}
       />
-      <div className="fixed inset-0 pointer-events-none -z-20">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px]" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[100px]" />
-      </div>
-      
     </>
   )
 }

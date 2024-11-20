@@ -1,5 +1,4 @@
 "use client";
-import { Lora } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
@@ -11,8 +10,6 @@ import telegram from "@/public/icons/contact-icons/Telegram.png";
 import twitter from "@/public/icons/contact-icons/Twitter.png";
 import whatsapp from "@/public/icons/contact-icons/Whatsapp.png";
 import messenger from "@/public/icons/contact-icons/Messenger.png";
-
-const lora = Lora({ subsets: ["latin"], weight: "400" });
 
 const socialLinks = [
   {
@@ -39,7 +36,7 @@ const socialLinks = [
   {
     name: 'Gmail',
     icon: gmail,
-    url: 'mailto:jihadhossen1999@gmail.com',
+    url: 'mailto:jihad.developer.bd@gmail.com',
     color: '#EA4335',
     category: 'email'
   },
@@ -78,7 +75,7 @@ const contactInfo = [
   },
   {
     label: 'Email',
-    value: 'jihadhossen1999@gmail.com',
+    value: 'jihad.developer.bd@gmail.com',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -109,17 +106,30 @@ const ContactPage = () => {
     setSuccess(false);
     setError(false);
 
+    console.log('Environment variables:', {
+      serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+    });
+
     try {
-      await emailjs.sendForm(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      const result = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
       
-      setSuccess(true);
-      formRef.current.reset();
+      console.log('EmailJS Response:', result);
+      
+      if (result.text === 'OK') {
+        setSuccess(true);
+        formRef.current.reset();
+      } else {
+        setError(true);
+      }
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setError(true);
     } finally {
       setLoading(false);
@@ -181,24 +191,26 @@ const ContactPage = () => {
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-xs md:text-sm text-white/60 mb-1.5 md:mb-2">
+                    <label htmlFor="from_name" className="block text-xs md:text-sm text-white/60 mb-1.5 md:mb-2">
                       Your Name
                     </label>
                     <input
                       type="text"
-                      name="name"
+                      id="from_name"
+                      name="from_name"
                       required
                       className="w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl bg-white/5 border border-white/10 
                         focus:border-indigo-500/50 text-white text-sm md:text-base outline-none transition-colors duration-300"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-xs md:text-sm text-white/60 mb-1.5 md:mb-2">
+                    <label htmlFor="from_email" className="block text-xs md:text-sm text-white/60 mb-1.5 md:mb-2">
                       Your Email
                     </label>
                     <input
                       type="email"
-                      name="email"
+                      id="from_email"
+                      name="from_email"
                       required
                       className="w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl bg-white/5 border border-white/10 
                         focus:border-indigo-500/50 text-white text-sm md:text-base outline-none transition-colors duration-300"
